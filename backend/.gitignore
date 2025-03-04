@@ -1,0 +1,60 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+out/
+
+# TypeScript files
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log
+yarn-debug.log
+pnpm-debug.log
+lerna-debug.log
+.log
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+
+# Debugging and profiling
+.vscode/
+*.swp
+*.swo
+*.swn
+.nyc_output/
+coverage/
+
+# Temporary files
+tmp/
+temp/
+*.bak
+*.backup
+.DS_Store
+
+# Miscellaneous
+.idea/
+*.iml
+.eslintcache
+.prettier
+.prettierignore
