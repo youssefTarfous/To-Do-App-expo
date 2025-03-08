@@ -1,7 +1,7 @@
 import { matchedData, validationResult } from "express-validator";
 import UserModel from "../Schemas/models/User";
 import { generateToken } from "../Utils/GenerateToken";
-import { PasswordComparer, PasswordHasher } from "../Utils/Helper";
+import { PasswordComparer } from "../Utils/Helper";
 import { Request, RequestHandler, Response } from "express";
 
 
@@ -74,10 +74,6 @@ export const registerUser = async (req: Request, res: Response) => {
       res.status(400).json({ message: "User already exists" });
       return;
     }
-
-    body.password = await PasswordHasher(body.password);
-    
-
     const newUser = new UserModel(body);
     const savedUser = await newUser.save();
 

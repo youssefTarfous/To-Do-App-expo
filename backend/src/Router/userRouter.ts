@@ -6,9 +6,9 @@ import { loginUser, logoutUser, registerUser } from "../controllers/UserControll
 
 const userRouter = Router();
 
-userRouter.post("/login", checkSchema(loginSchema),loginUser);
-userRouter.post("/register", checkSchema(userSchema), registerUser);
-userRouter.post("/logout", logoutUser);
+userRouter.post("/login", checkSchema(loginSchema),loginUser);//checked
+userRouter.post("/register", checkSchema(userSchema), registerUser);//checked
+userRouter.post("/logout", logoutUser);//checked
 
 
 

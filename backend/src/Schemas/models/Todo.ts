@@ -1,22 +1,21 @@
-import { Types } from "mongoose";
-import mongoose, {Schema, model } from "mongoose";
+import mongoose  from "mongoose";
 
-const todoSchema = new Schema({
+const todoSchema = new mongoose.Schema({
     title:{
-        type:Schema.Types.String,
+        type:mongoose.Schema.Types.String,
         required:true
     },
     status:{
-        type:Schema.Types.String,
+        type:mongoose.Schema.Types.String,
         enum:["pending","completed"],
         default:"pending"
     },
     category:{
-        type:Schema.Types.String,
+        type:mongoose.Schema.Types.String,
         required:true,
     },
     dueDate:{
-        type:Schema.Types.String,
+        type:mongoose.Schema.Types.String,
         required:true
     },
     createdAt:{
@@ -26,6 +25,6 @@ const todoSchema = new Schema({
 });
 
 
-const Todo = model("Todo",todoSchema);
+const Todo = mongoose.model("Todo",todoSchema);
 
-module.exports = Todo
+export default Todo
